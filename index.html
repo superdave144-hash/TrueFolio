@@ -69,7 +69,7 @@ nav {
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
   text-decoration: none;
-  color: var(--white-40);
+  color: var(--white);
   font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 0.16em;
@@ -342,7 +342,7 @@ nav {
 .step-desc {
   font-size: 0.82rem;
   font-weight: 200;
-  color: var(--white-40);
+  color: var(--white-70);
   line-height: 1.9;
 }
 
@@ -743,15 +743,15 @@ footer {
 .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
 .footer-links a {
   text-decoration: none;
-  color: var(--white-40);
+  color: var(--white);
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 300;
   transition: color 0.3s;
 }
-.footer-links a:hover { color: var(--white); }
-.footer-copy { font-size: 0.68rem; color: var(--white-15); letter-spacing: 0.08em; font-weight: 200; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copy { font-size: 0.68rem; color: var(--white); letter-spacing: 0.08em; font-weight: 200; }
 
 /* REVEAL */
 .reveal {
@@ -788,6 +788,58 @@ footer {
   .types-grid { grid-template-columns: 1fr; }
 }
 </style>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="TrueFolio builds beautiful, professional websites for individuals and businesses. Hosted at truefol.io/yourname. Built for you, owned by you, forever.">
+  <meta name="keywords" content="professional website, personal website, portfolio website, business card website, family page, web presence, custom website design">
+  <meta name="author" content="TrueFolio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://truefol.io">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://truefol.io">
+  <meta property="og:title" content="TrueFolio — Your story, told without compromise.">
+  <meta property="og:description" content="Professional websites built and hosted for you. Starting at $19.99/mo. Your site, your story, yours forever.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="TrueFolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://truefol.io">
+  <meta name="twitter:title" content="TrueFolio — Your story, told without compromise.">
+  <meta name="twitter:description" content="Professional websites built and hosted for you. Starting at $19.99/mo. Your site, your story, yours forever.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=1200&q=80&auto=format&fit=crop">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TrueFolio",
+    "url": "https://truefol.io",
+    "description": "Professional websites built and hosted for individuals and businesses.",
+    "email": "sales@truefol.io",
+    "priceRange": "$$",
+    "serviceType": "Web Design & Hosting",
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Website Types",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Resume & Portfolio"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Card Site"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Family Page"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Local Business"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event Page"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Artist Portfolio"}}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -854,7 +906,7 @@ footer {
         <img class="step-img" src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=600&q=75&auto=format&fit=crop" alt="Live site" loading="lazy">
         <span class="step-num">03</span>
         <h3 class="step-title">You Go Live</h3>
-        <p class="step-desc">Your site launches at truefol.io/yourname. $9.99/month keeps it live. Cancel anytime  your files are always yours to keep.</p>
+        <p class="step-desc">Your site launches at truefol.io/yourname. $19.99/month keeps it live. Cancel anytime  your files are always yours to keep.</p>
       </div>
     </div>
   </div>
@@ -1000,15 +1052,15 @@ footer {
     <div class="pricing-layout reveal">
       <div class="price-card">
         <span class="price-tag">Hosting</span>
-        <div class="price-amount"><sup>$</sup>9<span style="font-size:2.5rem">.99</span></div>
-        <p class="price-period">per month &nbsp;·&nbsp; cancel anytime</p>
+        <div class="price-amount"><sup>$</sup>19<span style="font-size:2.5rem">.99</span></div>
+        <p class="price-period">per month &nbsp;·&nbsp; or $199/yr (2 months free)</p>
         <div class="price-divider"></div>
         <div class="price-feature">Your site lives at truefol.io/yourname</div>
         <div class="price-feature">SSL certificate included</div>
         <div class="price-feature">Reliable, managed hosting</div>
         <div class="price-feature">Cancel anytime  full month refunded</div>
         <div class="price-feature">Your files are always yours to keep</div>
-        <p class="price-note">"Cancel anytime" means it. We refund your current month and send your files. No questions, no friction.</p>
+        <p class="price-note">"Cancel anytime" means it. Monthly plans refund your current month. Annual plans refunded pro-rata. We send your files either way. No questions, no friction.</p>
       </div>
       <div class="price-card">
         <span class="price-tag">Build</span>
@@ -1017,9 +1069,9 @@ footer {
         <div class="price-divider"></div>
         <div class="price-feature">Hand-built  no templates, ever</div>
         <div class="price-feature">One-hour minimum per project</div>
-        <div class="price-feature">Revisions billed at the same rate</div>
-        <div class="price-feature">Build fee is non-refundable</div>
-        <div class="price-feature">Updates &amp; changes $200/hr, 1hr min</div>
+        <div class="price-feature">Revisions at the same hourly rate</div>
+        <div class="price-feature">Non-refundable once work begins</div>
+        <div class="price-feature">Updates &amp; changes billed at the same rate</div>
         <div class="price-feature">Scope agreed before work begins</div>
         <p class="price-note">"Every site is a custom build. Not a template dressed up to look unique."</p>
       </div>
@@ -1052,10 +1104,10 @@ footer {
         <div class="accent-divider"></div>
         <p class="section-sub">Tell us what you need. We'll respond within one business day with a scope and timeline.</p>
         <br><br>
-        <p style="font-size:0.72rem; color:var(--white-15); letter-spacing:0.12em; font-weight:200;">sales@truefol.io</p>
+        <p style="font-size:0.72rem; color:rgba(0,0,0,0.65); letter-spacing:0.12em; font-weight:400;">sales@truefol.io</p>
       </div>
       <div class="reveal">
-        <form class="form-wrap" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="form-wrap" id="contactForm" action="https://formspree.io/f/xwvzpebj" method="POST">
           <div class="form-row">
             <div class="field">
               <label for="name">Full Name</label>
@@ -1097,7 +1149,7 @@ footer {
           </div>
           <div class="pricing-confirm">
             <input type="checkbox" id="pricing-ack" name="pricing_acknowledged" required>
-            <label for="pricing-ack">I understand: <strong>$200/hr to build</strong> (1hr minimum, non-refundable) and <strong>$9.99/month</strong> to host. Revisions and updates are also billed at $200/hr with a 1hr minimum.</label>
+            <label for="pricing-ack">I understand: <strong>$200/hr to build</strong> (1hr minimum, non-refundable) and <strong>$19.99/month</strong> to host. Revisions and updates are also billed at $200/hr with a 1hr minimum.</label>
           </div>
           <button type="submit" class="btn-submit">Submit My Project →</button>
         </form>
@@ -1181,7 +1233,7 @@ if (form) {
 #how-it-works .section-sub,
 #site-types .section-sub,
 #pricing .section-sub,
-#start .section-sub { color: #444440 !important; }
+#start .section-sub { color: #0a0a08 !important; }
 
 #how-it-works .section-label,
 #site-types .section-label,
@@ -1197,7 +1249,7 @@ if (form) {
 .step:hover { background: #ece8df !important; }
 .step-num { color: rgba(0,0,0,0.08) !important; }
 .step-title { color: #111111 !important; }
-.step-desc { color: #444440 !important; }
+.step-desc { color: #0a0a08 !important; }
 .steps-grid { border-color: rgba(0,0,0,0.08) !important; }
 .step { border-right-color: rgba(0,0,0,0.08) !important; }
 
@@ -1205,17 +1257,17 @@ if (form) {
 .type-card:hover { background: #e8e4db !important; }
 .types-grid { background: rgba(0,0,0,0.06) !important; border-color: rgba(0,0,0,0.06) !important; }
 .type-name { color: #111111 !important; }
-.type-desc { color: #444440 !important; }
-.type-link-soon { color: rgba(0,0,0,0.45) !important; }
+.type-desc { color: #0a0a08 !important; }
+.type-link-soon { color: rgba(0,0,0,0.55) !important; }
 
 .price-card { background: #ece8df !important; }
 .price-card:hover { background: #e8e4da !important; }
 .pricing-layout { background: rgba(0,0,0,0.06) !important; border-color: rgba(0,0,0,0.06) !important; }
 .price-tag { color: #b8975a !important; }
 .price-amount { color: #111111 !important; }
-.price-period { color: #444440 !important; }
+.price-period { color: #0a0a08 !important; }
 .price-divider { background: rgba(0,0,0,0.08) !important; }
-.price-feature { color: #444440 !important; }
+.price-feature { color: #0a0a08 !important; }
 .price-feature::before { color: #b8975a !important; }
 .price-note { color: rgba(0,0,0,0.5) !important; }
 
@@ -1226,21 +1278,21 @@ if (form) {
   color: #111111 !important;
 }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: #b8975a !important; }
-.field input::placeholder, .field textarea::placeholder { color: rgba(0,0,0,0.45) !important; }
+.field input::placeholder, .field textarea::placeholder { color: rgba(0,0,0,0.55) !important; }
 .field select option { background: #ffffff !important; color: #111111 !important; }
 .slug-prefix { color: #b8975a !important; }
 .pricing-confirm { border-color: rgba(0,0,0,0.08) !important; background: rgba(0,0,0,0.02) !important; }
-.pricing-confirm label { color: #444440 !important; }
-.pricing-confirm label strong { color: #333330 !important; }
-.btn-submit { background: #111111 !important; color: #ffffff !important; border-color: #111111 !important; }
+.pricing-confirm label { color: #0a0a08 !important; }
+.pricing-confirm label strong { color: #111110 !important; }
+.btn-submit { background: #5a5a54 !important; color: #ffffff !important; border-color: #111111 !important; }
 .btn-submit:hover { background: transparent !important; color: #111111 !important; }
 .form-success { border-color: rgba(0,0,0,0.1) !important; }
 .form-success .serif-big { color: #111111 !important; }
-.form-success p { color: #444440 !important; }
+.form-success p { color: #0a0a08 !important; }
 
 #start .section-label { color: #b8975a !important; }
 #start .accent-divider { background: #b8975a !important; }
 #start p[style] { color: rgba(0,0,0,0.25) !important; }
 
-footer { background: #111111 !important; border-top-color: rgba(255,255,255,0.08) !important; }
+footer { background: #5a5a54 !important; border-top-color: rgba(255,255,255,0.08) !important; }
 </style>
