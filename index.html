@@ -753,6 +753,68 @@ footer {
 .footer-links a:hover { color: var(--accent); }
 .footer-copy { font-size: 0.68rem; color: var(--white); letter-spacing: 0.08em; font-weight: 200; }
 
+
+/* FAQ */
+#faq {
+  background: #f5f2eb;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+#faq .section-title { color: #111111; }
+#faq .section-label { color: #b8975a; }
+#faq .section-label::before { background: #b8975a; }
+
+.faq-grid {
+  margin-top: 3rem;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.faq-item:last-child { border-bottom: none; }
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #111111;
+  text-align: left;
+  transition: background 0.3s;
+  gap: 1rem;
+}
+.faq-q:hover { background: rgba(0,0,0,0.02); }
+.faq-q.open { color: #b8975a; }
+
+.faq-icon {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: #b8975a;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  font-family: 'Jost', sans-serif;
+}
+.faq-q.open .faq-icon { transform: rotate(45deg); }
+
+.faq-a {
+  display: none;
+  padding: 0 2rem 1.5rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #333330;
+  line-height: 1.9;
+  max-width: 780px;
+}
+.faq-a.open { display: block; }
+
 /* REVEAL */
 .reveal {
   opacity: 0;
@@ -839,7 +901,26 @@ footer {
       ]
     }
   }
-  </script>
+  
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    // Open clicked if it was closed
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+});
+
+</script>
 </head>
 <body>
 
@@ -857,6 +938,7 @@ footer {
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#site-types">Site Types</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#start" class="nav-cta">Build My Site</a>
 </nav>
@@ -1079,6 +1161,110 @@ footer {
   </div>
 </section>
 
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Common<br><em>questions.</em></h2>
+    </div>
+    <div class="faq-grid reveal">
+
+      <div class="faq-item">
+        <button class="faq-q">How long does it take to build my site?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Approximately one week. Your timely feedback is required throughout the process to keep things moving.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What do I need to provide to get started?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Your site type, desired URL name, a description of what you would like built, any artwork or images you would like included, your contact information, existing branding if you have it, and examples of sites you love for reference.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">How many rounds of changes do I get before the site goes live?<span class="faq-icon">+</span></button>
+        <div class="faq-a">As many as required until it is right.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What happens after I submit the intake form?<span class="faq-icon">+</span></button>
+        <div class="faq-a">We will review your submission and reach out within one business day with a project proposal including scope, timeline, and estimated cost. No commitment required until you approve the proposal.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">If I cancel, what happens to my site?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Your site will be taken offline and your URL slug may be claimed by another customer. However your website files are yours to keep forever and we will send them to you upon cancellation.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Can I move my site to a different host?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes, you are free to move at any time. Your files are yours.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Who owns the content?<span class="faq-icon">+</span></button>
+        <div class="faq-a">You own all of your content.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Is my site backed up?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. We retain a copy locally as well as in the cloud.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Can I use my own domain name?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Please reach out to sales@truefol.io and we can evaluate your request.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Can I change my URL slug later?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes, but you will lose your current slug and there will be a one hour labor charge.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What counts as an update?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Minor text corrections such as typos or small wording changes are complimentary up to twice per month. Any structural changes, new content, new sections, or design modifications are billed at our standard hourly rate with a one hour minimum. We recommend batching your updates together to maximize each session.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">How do I request a change?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Email support@truefol.io with your request and we will get back to you within two business days.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">When do I pay?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Payment in full is required before site work begins.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What payment methods do you accept?<span class="faq-icon">+</span></button>
+        <div class="faq-a">We accept all major credit and debit cards, Apple Pay, and Google Pay through our secure Stripe payment portal.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Will my site work on mobile?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes, all TrueFolio sites are fully responsive and look great on phones, tablets, and desktops.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Will my site show up on Google?<span class="faq-icon">+</span></button>
+        <div class="faq-a">All TrueFolio sites are built with clean code and proper structure to be fully search engine friendly. We cannot control when or how often Google crawls and indexes your site but we make sure nothing stands in its way.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Is there a limit on photos or content?<span class="faq-icon">+</span></button>
+        <div class="faq-a">There is no practical limit on photos or content for a standard TrueFolio site. All sites are hosted on an enterprise-grade global network with unlimited bandwidth. If you have an unusually large project with video or hundreds of high resolution images, reach out to us at sales@truefol.io and we will discuss the best approach.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Can I request something custom not listed in your site types?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Absolutely. If you have something in mind that does not fit neatly into our standard site types, reach out to us at sales@truefol.io and we will discuss what is possible.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="about-bg"></div>
@@ -1134,6 +1320,7 @@ footer {
               <option value="pet-page">Pet Page</option>
               <option value="family-tree">Family Tree</option>
               <option value="restaurant-menu">Restaurant &amp; Menu</option>
+              <option value="other">Other / Custom Request</option>
             </select>
           </div>
           <div class="field">
@@ -1176,6 +1363,8 @@ footer {
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#site-types">Site Types</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#start">Get Started</a></li>
     <li><a href="mailto:sales@truefol.io">Contact</a></li>
   </ul>
@@ -1213,6 +1402,25 @@ if (form) {
     } catch(err) { btn.textContent = 'Submit My Project →'; btn.disabled = false; alert('Something went wrong. Please email sales@truefol.io'); }
   });
 }
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    // Open clicked if it was closed
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+});
+
 </script>
 </body>
 </html>
